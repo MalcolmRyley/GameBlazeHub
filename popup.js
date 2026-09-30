@@ -19,7 +19,7 @@
    * ================================================================ */
 
   // Add your custom destination URL here (opens when the image is clicked)
-  const buttonRedirectURL = "ADD_YOUR_URL_HERE";
+  const buttonRedirectURL = "https://api.whatsapp.com/send?phone=+919170742153&text=Get%2015%25%20Discount";
 
   const CONFIG = {
     imageFile: 'hero.png',           // Loaded relative to popup.js's own location
@@ -72,7 +72,7 @@
   function getDestination(raw) {
     if (typeof raw !== 'string') return null;
     const value = raw.trim();
-    if (!value || value === 'ADD_YOUR_URL_HERE') return null;
+    if (!value || value === 'https://api.whatsapp.com/send?phone=+919170742153&text=Get%2015%25%20Discount') return null;
     try {
       const parsed = new URL(value, document.baseURI);
       if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
