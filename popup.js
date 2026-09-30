@@ -72,7 +72,7 @@
   function getDestination(raw) {
     if (typeof raw !== 'string') return null;
     const value = raw.trim();
-    if (!value || value === 'https://api.whatsapp.com/send?phone=+919170742153&text=Get%2015%25%20Discount') return null;
+    if (!value || value === 'ADD_YOUR_URL_HERE') return null;
     try {
       const parsed = new URL(value, document.baseURI);
       if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return null;
